@@ -46,5 +46,5 @@ def add_s(ar)
     else
       element
     end
-    end
   end
+end
