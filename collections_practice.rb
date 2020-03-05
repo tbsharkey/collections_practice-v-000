@@ -7,15 +7,7 @@ def sort_array_desc(ar)
 end
 
 def sort_array_char_count(ar)
-  ar.sort do |a, b|
-    if a.length == b.length
-      0
-    elsif a.length < b.length
-      -1
-    elsif a.length > b.length
-      1
-    end
-  end
+  ar.sort {|a, b| a.length <=> b.length}
 end
 
 def swap_elements(ar)
@@ -28,7 +20,7 @@ def reverse_array(ar)
 end
 
 def kesha_maker(ar)
-ar.each{|a| a[2]="$"}
+  ar.each{|a| a[2]="$"}
 end
 
 def find_a(ar)
@@ -41,7 +33,7 @@ end
 
 def add_s(ar)
   ar.each_with_index.collect do |element, index|
-    if index!= 1
+    if index != 1
       element + "s"
     else
       element
